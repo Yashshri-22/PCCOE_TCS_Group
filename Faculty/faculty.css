@@ -1,0 +1,145 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 50px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f9fafc;
+    color: #333;
+    line-height: 1.7;
+    border: 2px solid #f4f3f374;
+    /* Shadow effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5%;
+    background: #f9fafc;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    padding-top: 5px;
+    height: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 700;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #004080;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 3px;
+}
+
+/* Faculty Grid */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 images per row */
+    gap: 30px;
+    max-width: 95%;
+    margin: 40px auto;
+    justify-items: center; /* center the images horizontally */
+}
+
+/* Active nav link */
+.nav-links a.active {
+    color: #0774f1; /* Blue color */
+    padding-bottom: 3px;
+}
+
+/* Faculty Card */
+.faculty-card {
+    text-align: left; /* text left-aligned */
+}
+
+/* Faculty Images */
+.faculty-card img {
+    width: 150px;  /* passport size width */
+    height: 200px; /* passport size height */
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #e8e8e8;
+}
+
+/* Faculty Info Text */
+.faculty-card h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #002147;
+}
+
+.faculty-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Responsive: stack 2 per row on smaller screens */
+@media (max-width: 900px) {
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: 1 per row on mobile */
+@media (max-width: 600px) {
+    .faculty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-card img {
+        width: 120px;
+        height: 160px;
+    }
+}
+
+/* Footer */
+footer {
+    background: #002147;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.95rem;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        /* Stack on small screens */
+    }
+
+    .left-column {
+        gap: 20px;
+    }
+}
